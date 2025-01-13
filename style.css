@@ -1,8 +1,25 @@
+h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#video-game{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
+    background-color: red;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .container {
@@ -11,8 +28,8 @@ body {
     justify-content: center;
     border-color: brown;
     border-style: solid;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 }
 
 .row-container {
@@ -25,4 +42,16 @@ body {
     display: flex;
     flex: 1;
     border: 1px solid black;
+    background-color: aliceblue;
+}
+
+
+#button-container {
+    display: flex;
+    gap: 20px;
+}
+
+button{
+    font-size: 20px;
+    background-color: white;
 }
