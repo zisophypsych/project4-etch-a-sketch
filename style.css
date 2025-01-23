@@ -11,6 +11,15 @@ body {
     gap: 20px;
 }
 
+
+
+.pixelify-sans-text {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
 #video-game{
     display: flex;
     justify-content: center;
