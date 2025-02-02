@@ -43,6 +43,22 @@ function squareBackColor(){
 resizeGrid();
 squareBackColor();
 
+function randomColorGenerate(){
+    return Math.floor(Math.random() * 255);
+}
+
+randomColor.addEventListener('click',squareBackColor = () => {
+    eraser.style.backgroundColor = 'white';
+    randomColor.style.backgroundColor = 'lightblue';
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+    square.addEventListener('mouseenter', () => {
+        square.style.backgroundColor = `rgb(${randomColorGenerate()}, ${randomColorGenerate()}, ${randomColorGenerate()})`
+        });
+    });
+    note.innerText = 'Note: Double click on random color button to disable it.'
+} )
+
 
 gridButton.addEventListener('click', () => {
     gridNumber = parseInt(prompt('Enter New Grid Size (must be =< 100 and >= 16): '));
@@ -67,6 +83,7 @@ clearButton.addEventListener('click', () => {
 })
 
 eraser.addEventListener('click',squareBackColor = () => {
+    randomColor.style.backgroundColor = 'white'
     eraser.style.backgroundColor = 'yellow';
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
@@ -79,6 +96,17 @@ eraser.addEventListener('click',squareBackColor = () => {
 
 eraser.addEventListener('dblclick',squareBackColor = () => {
     eraser.style.backgroundColor = 'white'
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(square => {
+    square.addEventListener('mouseenter', () => {
+        square.style.backgroundColor = 'black';
+        });
+    });
+    note.innerText = ''
+} )
+
+randomColor.addEventListener('dblclick',squareBackColor = () => {
+    randomColor.style.backgroundColor = 'white'
     const squares = document.querySelectorAll('.square');
     squares.forEach(square => {
     square.addEventListener('mouseenter', () => {
